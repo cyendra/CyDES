@@ -13,6 +13,24 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="头文件\Bit">
+      <UniqueIdentifier>{2cd679ac-b845-46bc-93ef-10021fb37aa7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Bit">
+      <UniqueIdentifier>{b6f3eb34-ed69-46cf-9f02-89703e6d1729}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\PTable">
+      <UniqueIdentifier>{0a6d65e0-abce-4003-b50b-81f40ed9845b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\PTable">
+      <UniqueIdentifier>{3a64b831-8920-443d-9c22-6ae1a587b68f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\SBox">
+      <UniqueIdentifier>{d45b4584-9d41-4a71-a956-6b6c1a421219}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\SBox">
+      <UniqueIdentifier>{ad4e7456-8a64-4c6c-9c2b-d3e3b52f4ecf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -24,6 +42,30 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="IBitwise.h">
+      <Filter>头文件\Bit</Filter>
+    </ClInclude>
+    <ClInclude Include="Bit.h">
+      <Filter>头文件\Bit</Filter>
+    </ClInclude>
+    <ClInclude Include="IPermutationTable.h">
+      <Filter>头文件\PTable</Filter>
+    </ClInclude>
+    <ClInclude Include="PTableDynamic.h">
+      <Filter>头文件\PTable</Filter>
+    </ClInclude>
+    <ClInclude Include="PTableStatic.h">
+      <Filter>头文件\PTable</Filter>
+    </ClInclude>
+    <ClInclude Include="ISBox.h">
+      <Filter>头文件\SBox</Filter>
+    </ClInclude>
+    <ClInclude Include="DesPTable.h">
+      <Filter>头文件\PTable</Filter>
+    </ClInclude>
+    <ClInclude Include="SBox.h">
+      <Filter>头文件\SBox</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -31,6 +73,18 @@
     </ClCompile>
     <ClCompile Include="CyDES.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Bit.cpp">
+      <Filter>源文件\Bit</Filter>
+    </ClCompile>
+    <ClCompile Include="PTableDynamic.cpp">
+      <Filter>源文件\PTable</Filter>
+    </ClCompile>
+    <ClCompile Include="PTableStatic.cpp">
+      <Filter>源文件\PTable</Filter>
+    </ClCompile>
+    <ClCompile Include="SBox.cpp">
+      <Filter>源文件\SBox</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
