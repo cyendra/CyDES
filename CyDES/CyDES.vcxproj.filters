@@ -54,9 +54,6 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="IBitwise.h">
-      <Filter>头文件\Bit</Filter>
-    </ClInclude>
     <ClInclude Include="Bit.h">
       <Filter>头文件\Bit</Filter>
     </ClInclude>

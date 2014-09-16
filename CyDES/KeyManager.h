@@ -5,6 +5,8 @@ private:
 	static std::vector<int> LsTable;
 	int cnt;
 	Bit Ci, Di;
+	IPermutationManager* pManager;
+	IPmtTableManager* tbManager;
 public:
 	KeyManager();
 	virtual ~KeyManager();

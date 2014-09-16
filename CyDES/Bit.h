@@ -1,12 +1,9 @@
 #pragma once
-#include "IBitwise.h"
-
 /*
-	实现接口IBitwise
 	表示64位以下的数据
 	可以做常见的位运算
 */
-class Bit :public IBitwise {
+class Bit {
 private:
 	unsigned long long bit;
 	int size;
@@ -14,21 +11,22 @@ public:
 	Bit();
 	Bit(unsigned long long _bit);
 	Bit(unsigned long long _bit, int n);
-	virtual ~Bit();
-	virtual void LeftShift(int d);
-	virtual void LeftRotate(int d);
-	virtual void Set(int pos);
-	virtual void Set();
-	virtual void Reset(int pos);
-	virtual void Reset();
-	virtual void Flip(int pos);
-	virtual void Flip();
-	virtual bool None();
-	virtual bool Any();
-	virtual int Count();
-	virtual int Size();
-	virtual bool operator[](int pos);
-	virtual unsigned long long ToULL();
-	virtual std::string ToString();
+	void LeftShift(int d);
+	void LeftRotate(int d);
+	void Set(int pos);
+	void Set();
+	void Reset(int pos);
+	void Reset();
+	void Flip(int pos);
+	void Flip();
+	bool None();
+	bool Any();
+	int Count();
+	int Size();
+	bool operator[](int pos);
+	unsigned long long ToULL();
+	std::string ToString();
+	static std::pair<Bit, Bit> Split(Bit bit);
+	static Bit Merge(Bit L, Bit R);
 };
 

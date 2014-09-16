@@ -82,7 +82,6 @@
     <ClInclude Include="Bit.h" />
     <ClInclude Include="DesPmtTableManager.h" />
     <ClInclude Include="DesSBoxManager.h" />
-    <ClInclude Include="IBitwise.h" />
     <ClInclude Include="IPermutationManager.h" />
     <ClInclude Include="IPermutationTable.h" />
     <ClInclude Include="IPmtTableManager.h" />

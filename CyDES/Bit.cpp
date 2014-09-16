@@ -2,18 +2,17 @@
 #include "Bit.h"
 
 
-#pragma region 构造函数与析构函数
+#pragma region 构造函数
 
 Bit::Bit() : size(64), bit(0) {}
 Bit::Bit(unsigned long long _bit) : size(64), bit(_bit) {}
 Bit::Bit(unsigned long long _bit, int n) {
 	n = std::min(64, n);
 	n = std::max(8, n);
-	bit = bit;
+	unsigned long long mask = (1LL << size) - 1;
+	bit = _bit & mask;
 	size = n;
 }
-Bit::~Bit() {}
-
 #pragma endregion
 
 #pragma region 实现接口 IBitwise
@@ -32,6 +31,24 @@ void Bit::LeftRotate(int d) {
 	bit <<= d;
 	bit &= mask;
 	bit |= right;
+}
+
+std::pair<Bit, Bit> Bit::Split(Bit bit) {
+	int n = bit.size / 2;
+	unsigned long long mask = (1LL << n) - 1;
+	unsigned long long R = bit.bit & mask;
+	unsigned long long L = bit.bit >> n;
+	Bit bitL(L, n);
+	Bit bitR(R, n);
+	return std::make_pair(bitL, bitR);
+}
+
+Bit Bit::Merge(Bit L, Bit R) {
+	int n = L.size;
+	int m = R.size;
+	unsigned long long t = L.size << n;
+	Bit bit(t, n + m);
+	return bit;
 }
 
 void Bit::Set(int pos) {
