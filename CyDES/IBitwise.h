@@ -7,6 +7,7 @@
 class IBitwise {
 public:
 	virtual void LeftShift(int d) = 0;
+	virtual void LeftRotate(int d) = 0;
 	virtual void Set(int pos) = 0;
 	virtual void Set() = 0;
 	virtual void Reset(int pos) = 0;

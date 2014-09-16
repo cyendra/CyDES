@@ -12,7 +12,6 @@ Bit::Bit(unsigned long long _bit, int n) {
 	bit = bit;
 	size = n;
 }
-Bit::Bit(int n) : Bit(0, n) {}
 Bit::~Bit() {}
 
 #pragma endregion
@@ -21,9 +20,18 @@ Bit::~Bit() {}
 
 void Bit::LeftShift(int d) {
 	d %= size;
-	unsigned long long mask = (1 << size) - 1;
+	unsigned long long mask = (1LL << size) - 1;
 	bit <<= d;
 	bit &= mask;
+}
+
+void Bit::LeftRotate(int d) {
+	d %= size;
+	unsigned long long mask = (1LL << size) - 1;
+	unsigned long long right = bit >> (size - d);
+	bit <<= d;
+	bit &= mask;
+	bit |= right;
 }
 
 void Bit::Set(int pos) {

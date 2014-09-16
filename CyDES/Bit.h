@@ -14,9 +14,9 @@ public:
 	Bit();
 	Bit(unsigned long long _bit);
 	Bit(unsigned long long _bit, int n);
-	Bit(int n);
 	virtual ~Bit();
 	virtual void LeftShift(int d);
+	virtual void LeftRotate(int d);
 	virtual void Set(int pos);
 	virtual void Set();
 	virtual void Reset(int pos);

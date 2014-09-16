@@ -80,22 +80,30 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bit.h" />
-    <ClInclude Include="DesPTable.h" />
+    <ClInclude Include="DesPmtTableManager.h" />
     <ClInclude Include="DesSBox.h" />
     <ClInclude Include="IBitwise.h" />
+    <ClInclude Include="IPermutationManager.h" />
     <ClInclude Include="IPermutationTable.h" />
+    <ClInclude Include="IPmtTableManager.h" />
     <ClInclude Include="ISBox.h" />
-    <ClInclude Include="PTableDynamic.h" />
-    <ClInclude Include="PTableStatic.h" />
+    <ClInclude Include="KeyManager.h" />
+    <ClInclude Include="PermutationManager.h" />
+    <ClInclude Include="PmtTableDynamic.h" />
+    <ClInclude Include="PmtTableStatic.h" />
     <ClInclude Include="SBox.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="IKeyManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Bit.cpp" />
     <ClCompile Include="CyDES.cpp" />
-    <ClCompile Include="PTableDynamic.cpp" />
-    <ClCompile Include="PTableStatic.cpp" />
+    <ClCompile Include="DesPmtTableManager.cpp" />
+    <ClCompile Include="KeyManager.cpp" />
+    <ClCompile Include="PermutationManager.cpp" />
+    <ClCompile Include="PmtTableDynamic.cpp" />
+    <ClCompile Include="PmtTableStatic.cpp" />
     <ClCompile Include="SBox.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

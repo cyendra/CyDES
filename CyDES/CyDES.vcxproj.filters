@@ -19,17 +19,29 @@
     <Filter Include="源文件\Bit">
       <UniqueIdentifier>{b6f3eb34-ed69-46cf-9f02-89703e6d1729}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\PTable">
-      <UniqueIdentifier>{0a6d65e0-abce-4003-b50b-81f40ed9845b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="源文件\PTable">
-      <UniqueIdentifier>{3a64b831-8920-443d-9c22-6ae1a587b68f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="头文件\SBox">
       <UniqueIdentifier>{d45b4584-9d41-4a71-a956-6b6c1a421219}</UniqueIdentifier>
     </Filter>
     <Filter Include="源文件\SBox">
       <UniqueIdentifier>{ad4e7456-8a64-4c6c-9c2b-d3e3b52f4ecf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Key">
+      <UniqueIdentifier>{61b66615-3442-4ff6-bc33-f3ea5fc8cbbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Key">
+      <UniqueIdentifier>{9827d02c-b0a5-4f26-98ae-f06a592d93e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Permutation">
+      <UniqueIdentifier>{6a9cf076-fb47-4f3c-ad48-6188296c9816}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Permutation">
+      <UniqueIdentifier>{777c9572-97e5-4f88-9a7c-9a30ff2f1396}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\PmtTable">
+      <UniqueIdentifier>{0a6d65e0-abce-4003-b50b-81f40ed9845b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\PmtTable">
+      <UniqueIdentifier>{3a64b831-8920-443d-9c22-6ae1a587b68f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -49,25 +61,40 @@
       <Filter>头文件\Bit</Filter>
     </ClInclude>
     <ClInclude Include="IPermutationTable.h">
-      <Filter>头文件\PTable</Filter>
-    </ClInclude>
-    <ClInclude Include="PTableDynamic.h">
-      <Filter>头文件\PTable</Filter>
-    </ClInclude>
-    <ClInclude Include="PTableStatic.h">
-      <Filter>头文件\PTable</Filter>
+      <Filter>头文件\PmtTable</Filter>
     </ClInclude>
     <ClInclude Include="ISBox.h">
       <Filter>头文件\SBox</Filter>
-    </ClInclude>
-    <ClInclude Include="DesPTable.h">
-      <Filter>头文件\PTable</Filter>
     </ClInclude>
     <ClInclude Include="SBox.h">
       <Filter>头文件\SBox</Filter>
     </ClInclude>
     <ClInclude Include="DesSBox.h">
       <Filter>头文件\SBox</Filter>
+    </ClInclude>
+    <ClInclude Include="IKeyManager.h">
+      <Filter>头文件\Key</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyManager.h">
+      <Filter>头文件\Key</Filter>
+    </ClInclude>
+    <ClInclude Include="IPermutationManager.h">
+      <Filter>头文件\Permutation</Filter>
+    </ClInclude>
+    <ClInclude Include="PermutationManager.h">
+      <Filter>头文件\Permutation</Filter>
+    </ClInclude>
+    <ClInclude Include="IPmtTableManager.h">
+      <Filter>头文件\PmtTable</Filter>
+    </ClInclude>
+    <ClInclude Include="PmtTableDynamic.h">
+      <Filter>头文件\PmtTable</Filter>
+    </ClInclude>
+    <ClInclude Include="PmtTableStatic.h">
+      <Filter>头文件\PmtTable</Filter>
+    </ClInclude>
+    <ClInclude Include="DesPmtTableManager.h">
+      <Filter>头文件\PmtTable</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -80,14 +107,23 @@
     <ClCompile Include="Bit.cpp">
       <Filter>源文件\Bit</Filter>
     </ClCompile>
-    <ClCompile Include="PTableDynamic.cpp">
-      <Filter>源文件\PTable</Filter>
-    </ClCompile>
-    <ClCompile Include="PTableStatic.cpp">
-      <Filter>源文件\PTable</Filter>
-    </ClCompile>
     <ClCompile Include="SBox.cpp">
       <Filter>源文件\SBox</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyManager.cpp">
+      <Filter>源文件\Key</Filter>
+    </ClCompile>
+    <ClCompile Include="PermutationManager.cpp">
+      <Filter>源文件\Permutation</Filter>
+    </ClCompile>
+    <ClCompile Include="PmtTableDynamic.cpp">
+      <Filter>源文件\PmtTable</Filter>
+    </ClCompile>
+    <ClCompile Include="PmtTableStatic.cpp">
+      <Filter>源文件\PmtTable</Filter>
+    </ClCompile>
+    <ClCompile Include="DesPmtTableManager.cpp">
+      <Filter>源文件\PmtTable</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
