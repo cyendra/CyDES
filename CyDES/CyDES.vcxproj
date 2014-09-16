@@ -81,9 +81,11 @@
   <ItemGroup>
     <ClInclude Include="Bit.h" />
     <ClInclude Include="common.h" />
+    <ClInclude Include="DataEncryptionStandard.h" />
     <ClInclude Include="DesFunction.h" />
     <ClInclude Include="DesPmtTableManager.h" />
     <ClInclude Include="DesSBoxManager.h" />
+    <ClInclude Include="IDes.h" />
     <ClInclude Include="IFunction.h" />
     <ClInclude Include="IPermutationManager.h" />
     <ClInclude Include="IPermutationTable.h" />
@@ -102,6 +104,7 @@
   <ItemGroup>
     <ClCompile Include="Bit.cpp" />
     <ClCompile Include="CyDES.cpp" />
+    <ClCompile Include="DataEncryptionStandard.cpp" />
     <ClCompile Include="DesFunction.cpp" />
     <ClCompile Include="DesPmtTableManager.cpp" />
     <ClCompile Include="DesSBoxManager.cpp" />

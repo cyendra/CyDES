@@ -52,6 +52,12 @@
     <Filter Include="头文件\Common">
       <UniqueIdentifier>{eba59e81-904a-4fed-be19-5e97fec083be}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\DES">
+      <UniqueIdentifier>{98d5d3cc-f09b-4ee7-893a-438b6a5358b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\DES">
+      <UniqueIdentifier>{9bc1a654-6c2b-46ce-a241-7d854e8ab238}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -112,7 +118,13 @@
       <Filter>头文件\Common</Filter>
     </ClInclude>
     <ClInclude Include="DesFunction.h">
-      <Filter>头文件</Filter>
+      <Filter>头文件\Function</Filter>
+    </ClInclude>
+    <ClInclude Include="IDes.h">
+      <Filter>头文件\DES</Filter>
+    </ClInclude>
+    <ClInclude Include="DataEncryptionStandard.h">
+      <Filter>头文件\DES</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +160,9 @@
     </ClCompile>
     <ClCompile Include="DesFunction.cpp">
       <Filter>源文件\Function</Filter>
+    </ClCompile>
+    <ClCompile Include="DataEncryptionStandard.cpp">
+      <Filter>源文件\DES</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

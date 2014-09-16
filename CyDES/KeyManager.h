@@ -1,5 +1,7 @@
 #pragma once
 #include "IKeyManager.h"
+#include "IPermutationManager.h"
+#include "IPmtTableManager.h"
 class KeyManager :public IKeyManager {
 private:
 	static std::vector<int> LsTable;
