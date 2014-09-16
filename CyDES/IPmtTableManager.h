@@ -1,4 +1,5 @@
 #pragma once
+#include "common.h"
 #include "IPermutationTable.h"
 class IPmtTableManager :public Uncopyable {
 public:

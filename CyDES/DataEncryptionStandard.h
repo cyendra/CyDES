@@ -1,5 +1,10 @@
 #pragma once
 #include "IDes.h"
+#include "IKeyManager.h"
+#include "IFunction.h"
+#include "IPermutationManager.h"
+#include "IPmtTableManager.h"
+
 class DataEncryptionStandard :public IDes {
 private:
 	Bit masterKey;

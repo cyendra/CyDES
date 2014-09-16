@@ -20,6 +20,7 @@ Bit::Bit(const Bit& b) {
 Bit& Bit::operator = (Bit& b) {
 	bit = b.bit;
 	size = b.size;
+	return *this;
 }
 
 #pragma endregion

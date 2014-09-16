@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "PmtTableStatic.h"
+#include "PmtTableDynamic.h"
 
 #pragma region ≥ı º÷√ªª±ÌIP
 

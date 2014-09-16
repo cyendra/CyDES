@@ -165,7 +165,4 @@
       <Filter>源文件\DES</Filter>
     </ClCompile>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
-  </ItemGroup>
 </Project>
