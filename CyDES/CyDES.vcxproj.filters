@@ -58,6 +58,9 @@
     <Filter Include="源文件\DES">
       <UniqueIdentifier>{9bc1a654-6c2b-46ce-a241-7d854e8ab238}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Debug">
+      <UniqueIdentifier>{16b6383f-fcfe-42b7-9fd3-eee3d35bb49d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -125,6 +128,9 @@
     </ClInclude>
     <ClInclude Include="DataEncryptionStandard.h">
       <Filter>头文件\DES</Filter>
+    </ClInclude>
+    <ClInclude Include="TestPackage.h">
+      <Filter>头文件\Debug</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

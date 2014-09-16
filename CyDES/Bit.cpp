@@ -56,7 +56,7 @@ std::pair<Bit, Bit> Bit::Split(Bit bit) {
 Bit Bit::Merge(Bit L, Bit R) {
 	int n = L.size;
 	int m = R.size;
-	unsigned long long t = L.size << n;
+	unsigned long long t = L.bit << n;
 	Bit bit(t, n + m);
 	return bit;
 }
