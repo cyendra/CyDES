@@ -81,6 +81,7 @@
   <ItemGroup>
     <ClInclude Include="Bit.h" />
     <ClInclude Include="DesPTable.h" />
+    <ClInclude Include="DesSBox.h" />
     <ClInclude Include="IBitwise.h" />
     <ClInclude Include="IPermutationTable.h" />
     <ClInclude Include="ISBox.h" />

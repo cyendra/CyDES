@@ -66,6 +66,9 @@
     <ClInclude Include="SBox.h">
       <Filter>头文件\SBox</Filter>
     </ClInclude>
+    <ClInclude Include="DesSBox.h">
+      <Filter>头文件\SBox</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

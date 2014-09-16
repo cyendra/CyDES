@@ -20,7 +20,4 @@ public:
 	virtual bool operator[](int pos) = 0;
 	virtual unsigned long long ToULL() = 0;
 	virtual std::string ToString() = 0;
-	virtual ~IBitwise() = 0;
 };
-
-IBitwise::~IBitwise() {}

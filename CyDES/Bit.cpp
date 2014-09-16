@@ -28,16 +28,16 @@ void Bit::LeftShift(int d) {
 
 void Bit::Set(int pos) {
 	if (pos < 0 || pos >= size) return;
-	bit |= 1 << (size - pos - 1);
+	bit |= 1LL << (size - pos - 1);
 }
 
 void Bit::Set() {
-	bit = (1 << size) - 1;
+	bit = (1LL << size) - 1;
 }
 
 void Bit::Reset(int pos) {
 	if (pos < 0 || pos >= size) return;
-	bit &= ~(1 << (size - pos - 1));
+	bit &= ~(1LL << (size - pos - 1));
 }
 
 void Bit::Reset() {
@@ -77,7 +77,8 @@ int Bit::Size() {
 
 bool Bit::operator[](int pos) {
 	if (pos < 0 || pos >= size) return 0;
-	return bit & 1 << (size - pos - 1);
+	if (bit & 1LL << (size - pos - 1)) return true;
+	return false;
 }
 
 unsigned long long Bit::ToULL() {
