@@ -69,9 +69,6 @@
     <ClInclude Include="SBox.h">
       <Filter>头文件\SBox</Filter>
     </ClInclude>
-    <ClInclude Include="DesSBox.h">
-      <Filter>头文件\SBox</Filter>
-    </ClInclude>
     <ClInclude Include="IKeyManager.h">
       <Filter>头文件\Key</Filter>
     </ClInclude>
@@ -95,6 +92,12 @@
     </ClInclude>
     <ClInclude Include="DesPmtTableManager.h">
       <Filter>头文件\PmtTable</Filter>
+    </ClInclude>
+    <ClInclude Include="ISBoxManager.h">
+      <Filter>头文件\SBox</Filter>
+    </ClInclude>
+    <ClInclude Include="DesSBoxManager.h">
+      <Filter>头文件\SBox</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -124,6 +127,9 @@
     </ClCompile>
     <ClCompile Include="DesPmtTableManager.cpp">
       <Filter>源文件\PmtTable</Filter>
+    </ClCompile>
+    <ClCompile Include="DesSBoxManager.cpp">
+      <Filter>源文件\SBox</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

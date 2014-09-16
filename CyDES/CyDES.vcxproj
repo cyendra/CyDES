@@ -81,12 +81,13 @@
   <ItemGroup>
     <ClInclude Include="Bit.h" />
     <ClInclude Include="DesPmtTableManager.h" />
-    <ClInclude Include="DesSBox.h" />
+    <ClInclude Include="DesSBoxManager.h" />
     <ClInclude Include="IBitwise.h" />
     <ClInclude Include="IPermutationManager.h" />
     <ClInclude Include="IPermutationTable.h" />
     <ClInclude Include="IPmtTableManager.h" />
     <ClInclude Include="ISBox.h" />
+    <ClInclude Include="ISBoxManager.h" />
     <ClInclude Include="KeyManager.h" />
     <ClInclude Include="PermutationManager.h" />
     <ClInclude Include="PmtTableDynamic.h" />
@@ -100,6 +101,7 @@
     <ClCompile Include="Bit.cpp" />
     <ClCompile Include="CyDES.cpp" />
     <ClCompile Include="DesPmtTableManager.cpp" />
+    <ClCompile Include="DesSBoxManager.cpp" />
     <ClCompile Include="KeyManager.cpp" />
     <ClCompile Include="PermutationManager.cpp" />
     <ClCompile Include="PmtTableDynamic.cpp" />

@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "SBox.h"
 
+SBox::SBox() {}
 SBox::SBox(std::initializer_list<std::initializer_list<int>> lst) {
 	for (auto it = lst.begin(); it != lst.end(); it++) 	box.push_back(*it);
 }
