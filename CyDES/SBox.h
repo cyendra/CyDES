@@ -8,7 +8,7 @@ private:
 public:
 	SBox();
 	SBox(std::initializer_list<std::initializer_list<int>> lst);
-	int Get(int i, int j);
-	int Get(Bit pos);
+	Bit Get(int i, int j);
+	Bit Get(Bit pos);
 };
 

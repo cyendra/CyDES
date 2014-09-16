@@ -3,6 +3,6 @@
 #include "Bit.h"
 class ISBox {
 public:
-	virtual int Get(Bit pos) = 0;
-	virtual int Get(int i, int j) = 0;
+	virtual Bit Get(Bit pos) = 0;
+	virtual Bit Get(int i, int j) = 0;
 };

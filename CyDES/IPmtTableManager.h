@@ -1,10 +1,6 @@
 #pragma once
 #include "IPermutationTable.h"
-class IPmtTableManager {
-protected:
-	IPmtTableManager() {}
-	IPmtTableManager(const IPmtTableManager&);
-	IPmtTableManager* operator=(const IPmtTableManager&);
+class IPmtTableManager :public Uncopyable {
 public:
 	virtual IPermutationTable* GetIPTable() = 0;
 	virtual IPermutationTable* GetIPRevTable() = 0;

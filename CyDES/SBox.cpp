@@ -6,13 +6,14 @@ SBox::SBox(std::initializer_list<std::initializer_list<int>> lst) {
 	for (auto it = lst.begin(); it != lst.end(); it++) 	box.push_back(*it);
 }
 
-int SBox::Get(int i, int j){
+Bit SBox::Get(int i, int j){
 	if (i < 0 || i >= (int)box.size()) return -1;
 	if (j < 0 || j >= (int)box[0].size()) return -1;
-	return box[i][j];
+	Bit res(box[i][j], 4);
+	return res;
 }
 
-int SBox::Get(Bit pos) {
+Bit SBox::Get(Bit pos) {
 	int x = 0, y = 0;
 	x |= (int)pos[0];
 	x <<= 1;

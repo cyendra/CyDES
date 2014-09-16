@@ -8,11 +8,20 @@ Bit::Bit() : size(64), bit(0) {}
 Bit::Bit(unsigned long long _bit) : size(64), bit(_bit) {}
 Bit::Bit(unsigned long long _bit, int n) {
 	n = std::min(64, n);
-	n = std::max(8, n);
+	n = std::max(1, n);
 	unsigned long long mask = (1LL << size) - 1;
 	bit = _bit & mask;
 	size = n;
 }
+Bit::Bit(const Bit& b) {
+	bit = b.bit;
+	size = b.size;
+}
+Bit& Bit::operator = (Bit& b) {
+	bit = b.bit;
+	size = b.size;
+}
+
 #pragma endregion
 
 #pragma region 实现接口 IBitwise
@@ -117,6 +126,22 @@ std::string Bit::ToString() {
 		else res.push_back('1');
 	}
 	return res;
+}
+
+Bit Bit::Merge(Bit b[], int L, int R) {
+	if (L == R) return b[L];
+	int mid = (L + R) / 2;
+	Bit bL = Merge(b, L, mid);
+	Bit bR = Merge(b, mid + 1, R);
+	Bit res = Merge(bL, bR);
+	return res;
+}
+
+Bit Bit::Xor(Bit x, Bit y) {
+	int n = std::max(x.size, y.size);
+	unsigned long long t = x.bit ^ y.bit;
+	Bit ans(t, n);
+	return ans;
 }
 
 #pragma endregion

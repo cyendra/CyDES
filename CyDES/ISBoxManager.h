@@ -1,12 +1,9 @@
 #pragma once
 
 #include "SBox.h"
+#include "common.h"
 
-class ISBoxManager {
-protected:
-	ISBoxManager() {}
-	ISBoxManager(const ISBoxManager&);
-	ISBoxManager& operator=(const ISBoxManager&);
+class ISBoxManager :public Uncopyable {
 public:
 	virtual SBox* GetSBox(int i) = 0;
 };

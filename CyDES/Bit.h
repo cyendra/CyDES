@@ -11,6 +11,8 @@ public:
 	Bit();
 	Bit(unsigned long long _bit);
 	Bit(unsigned long long _bit, int n);
+	Bit(const Bit& b);
+	Bit& operator=(Bit& b);
 	void LeftShift(int d);
 	void LeftRotate(int d);
 	void Set(int pos);
@@ -28,5 +30,7 @@ public:
 	std::string ToString();
 	static std::pair<Bit, Bit> Split(Bit bit);
 	static Bit Merge(Bit L, Bit R);
+	static Bit Merge(Bit b[], int L, int R);
+	static Bit Xor(Bit x, Bit y);
 };
 

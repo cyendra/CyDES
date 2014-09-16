@@ -43,6 +43,15 @@
     <Filter Include="源文件\PmtTable">
       <UniqueIdentifier>{3a64b831-8920-443d-9c22-6ae1a587b68f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Function">
+      <UniqueIdentifier>{d8735b54-d1e1-412f-88d1-cf7e1d431509}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Function">
+      <UniqueIdentifier>{96b88715-d612-4a0a-9723-03f4718a1339}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Common">
+      <UniqueIdentifier>{eba59e81-904a-4fed-be19-5e97fec083be}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -96,6 +105,15 @@
     <ClInclude Include="DesSBoxManager.h">
       <Filter>头文件\SBox</Filter>
     </ClInclude>
+    <ClInclude Include="IFunction.h">
+      <Filter>头文件\Function</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="DesFunction.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -128,5 +146,11 @@
     <ClCompile Include="DesSBoxManager.cpp">
       <Filter>源文件\SBox</Filter>
     </ClCompile>
+    <ClCompile Include="DesFunction.cpp">
+      <Filter>源文件\Function</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>
