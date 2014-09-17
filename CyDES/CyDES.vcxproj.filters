@@ -61,6 +61,9 @@
     <Filter Include="头文件\Debug">
       <UniqueIdentifier>{16b6383f-fcfe-42b7-9fd3-eee3d35bb49d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Encryptor">
+      <UniqueIdentifier>{0a5bfd91-d937-4a8c-aa89-822c77d66bf7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -128,6 +131,9 @@
     </ClInclude>
     <ClInclude Include="TestPackage.h">
       <Filter>头文件\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="IEncryptor.h">
+      <Filter>头文件\Encryptor</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "Bit.h"
 
-
 #pragma region ¹¹Ôìº¯Êý
 
 Bit::Bit() : size(64), bit(0) {}

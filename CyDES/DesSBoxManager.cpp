@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "DesSBoxManager.h"
 
-
 DesSBoxManager::DesSBoxManager() {}
 DesSBoxManager::~DesSBoxManager() {}
 

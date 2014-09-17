@@ -14,11 +14,8 @@ DataEncryptionStandard::DataEncryptionStandard() {
 DataEncryptionStandard::~DataEncryptionStandard() {}
 
 void DataEncryptionStandard::SetMasterKey(Bit key) {
+	keys = keyManager->GetKeys(key);
 	masterKey = key;
-	keyManager->Reset(key);
-	for (int i = 0; i < 16; i++) {
-		subKey[i] = keyManager->GetNextKey();
-	}
 }
 
 Bit DataEncryptionStandard::Encryption(Bit dat) {
@@ -29,7 +26,7 @@ Bit DataEncryptionStandard::Encryption(Bit dat) {
 	Bit R = pir.second;
 	for (int i = 0; i < 16; i++) {
 		Bit t = R;
-		R = Bit::Xor(L, function->ProcessKey(R, subKey[i]));
+		R = Bit::Xor(L, function->ProcessKey(R, keys[i]));
 		L = t;
 	}
 	Bit res = Bit::Merge(R, L);
@@ -46,7 +43,7 @@ Bit DataEncryptionStandard::Decryption(Bit dat) {
 	Bit R = pir.first;
 	for (int i = 15; i >= 0; i--) {
 		Bit t = L;
-		L = Bit::Xor(R, function->ProcessKey(L, subKey[i]));
+		L = Bit::Xor(R, function->ProcessKey(L, keys[i]));
 		R = t;
 	}
 	Bit res = Bit::Merge(L, R);

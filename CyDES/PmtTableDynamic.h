@@ -1,4 +1,5 @@
 #pragma once
+
 #include "IPermutationTable.h"
 
 /*
@@ -6,7 +7,11 @@
 */
 class DesIpTable :public IPermutationTable {
 public:
+	// 置换表中元素个数
 	int Size();
+
+	// 获取表中第pos个元素
+	// pos从0开始计数
 	int Get(int pos);
 };
 
@@ -15,7 +20,11 @@ public:
 */
 class DesIpRevTable :public IPermutationTable {
 public:
+	// 置换表中元素个数
 	int Size();
+
+	// 获取表中第pos个元素
+	// pos从0开始计数
 	int Get(int pos);
 };
 
@@ -24,6 +33,10 @@ public:
 */
 class DesETable :public IPermutationTable {
 public:
+	// 置换表中元素个数
 	int Size();
+
+	// 获取表中第pos个元素
+	// pos从0开始计数
 	int Get(int pos);
 };

@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "PermutationManager.h"
 
-
 PermutationManager::PermutationManager() {}
 PermutationManager::~PermutationManager(){}
 

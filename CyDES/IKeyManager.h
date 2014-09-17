@@ -1,9 +1,14 @@
 #pragma once
 
-#include "stdafx.h"
 #include "Bit.h"
-class IKeyManager {
+#include "common.h"
+
+/*
+	主密钥产生子密钥的接口
+	单例模式
+*/
+class IKeyManager :public Uncopyable {
 public:
-	virtual void Reset(Bit MasterKey) = 0;
-	virtual Bit GetNextKey() = 0;
+	// 通过主密钥产生子密钥
+	virtual std::vector<Bit> GetKeys(Bit MasterKey) = 0;
 };

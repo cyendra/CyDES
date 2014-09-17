@@ -28,6 +28,7 @@ namespace TestPackage {
 		auto b4(b2);
 		cout << "Bit(bit)£º" << b4.ToString() << endl;
 		auto b5 = b3;
+	
 		cout << "operator=(b3)£º" << b3.ToString() << endl;
 		cout << endl;
 
@@ -241,10 +242,9 @@ namespace TestPackage {
 		auto kManager = KeyManager::Instance();
 		Bit key(987654321123456798LL);
 		cout << "Key = " << key.ToString() << endl;
-		kManager->Reset(key);
+		auto keys = kManager->GetKeys(key);
 		for (int i = 0; i < 16; i++) {
-			auto k = kManager->GetNextKey();
-			cout << "Key-" << i + 1 << " = " << k.ToString() << endl;
+			cout << "Key-" << i + 1 << " = " << keys[i].ToString() << endl;
 		}
 		cout << endl;
 	}

@@ -2,9 +2,9 @@
 #include "DesFunction.h"
 #include "PermutationManager.h"
 #include "DesPmtTableManager.h"
-#include "IPermutationTable.h"
 #include "DesSBoxManager.h"
-#include "ISBox.h"
+#include "SBox.h"
+#include "IPermutationTable.h"
 
 DesFunction::DesFunction() {
 	pManager = PermutationManager::Instance();
