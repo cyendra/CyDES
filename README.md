@@ -6,7 +6,7 @@ CyDES
   
 ![类视图](ClassDiagram.png)  
   
-Bit类是最基本的类，它表示一组64位以下的数据。
+Bit类是最基本的类，它表示一组不超过64位的数据。
 IPermutationTable接口提供了置换表的表示方法，ISBox接口提供了S-Box的表示方法。  
 而IPmtTableManager接口用来管理所有置换表，ISBoxManager接口用于管理S-Box。  
 IPermutationManager接口提供了用一个置换表置换一组数据的方法。  
