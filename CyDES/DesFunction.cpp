@@ -14,7 +14,7 @@ DesFunction::DesFunction() {
 DesFunction::~DesFunction() {}
 
 Bit DesFunction::ProcessKey(Bit bit, Bit key) {
-	IPermutationTable* ex = tbManager->GetETable();
+	auto ex = tbManager->GetETable();
 	Bit base = pManager->Permutation(bit, ex);
 	base = Bit::Xor(base, key);
 	auto pir_1to4_5to8 = Bit::Split(base);
@@ -38,7 +38,7 @@ Bit DesFunction::ProcessKey(Bit bit, Bit key) {
 		a[i] = bxManager->GetSBox(i)->Get(b[i]);
 	}
 	Bit res = Bit::Merge(a, 1, 8);
-	IPermutationTable* px = tbManager->GetPTable();
+	auto px = tbManager->GetPTable();
 	res = pManager->Permutation(res, px);
 	return res;
 }

@@ -28,8 +28,9 @@ Bit DataEncryptionStandard::Encryption(Bit dat) {
 	Bit L = pir.first;
 	Bit R = pir.second;
 	for (int i = 0; i < 16; i++) {
-		L = R;
+		Bit t = R;
 		R = Bit::Xor(L, function->ProcessKey(R, subKey[i]));
+		L = t;
 	}
 	Bit res = Bit::Merge(R, L);
 	auto ip_1 = tbManager->GetIPRevTable();

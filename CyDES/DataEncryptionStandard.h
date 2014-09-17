@@ -9,7 +9,7 @@ class DataEncryptionStandard :public IDes {
 private:
 	Bit masterKey;
 	Bit subKey[16];
-	IKeyManager* keyManager;
+	std::shared_ptr<IKeyManager> keyManager;
 	IFunction* function;
 	IPermutationManager* pManager;
 	IPmtTableManager* tbManager;

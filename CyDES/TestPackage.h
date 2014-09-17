@@ -2,6 +2,16 @@
 
 #include "stdafx.h"
 #include "Bit.h"
+#include "PermutationManager.h"
+#include "IPmtTableManager.h"
+#include "DesPmtTableManager.h"
+#include "IPermutationTable.h"
+#include "PmtTableStatic.h"
+#include "SBox.h"
+#include "DesSBoxManager.h"
+#include "ISBox.h"
+#include "KeyManager.h"
+#include "DataEncryptionStandard.h"
 namespace TestPackage {
 	using namespace std;
 	void TestBit() {
@@ -158,7 +168,110 @@ namespace TestPackage {
 		cout << endl;
 	}
 
+	void TestPermutation() {
+		auto pManager = PermutationManager::Instance();
+		auto tbManager = DesPmtTableManager::Instance();
+		
+		IPermutationTable* tb[6];
+
+		tb[0] = tbManager->GetIPTable();
+		tb[1] = tbManager->GetIPRevTable();
+		tb[2] = tbManager->GetPC1Table();
+		tb[3] = tbManager->GetPC2Table();
+		tb[4] = tbManager->GetETable();
+		tb[5] = tbManager->GetPTable();
+		cout << "¿ªÊ¼²âÊÔÖÃ»»±í" << endl << "=====================" << endl;
+		for (int i = 0; i < 6; i++) {
+			cout << "±í_" << i<<"£º";
+			for (int j = 0; j < tb[i]->Size(); j++) {
+				cout << tb[i]->Get(j) << " ";
+			}
+			cout << endl;
+		}
+
+		PmtTableStatic Tp{ 3, 5, 2, 7, 4, 10, 1, 9, 8, 6 };
+		Bit Key(642, 10);
+		cout << "Bit£º   " << Key.ToString() << endl;
+		Bit pk = pManager->Permutation(Key, &Tp);
+		cout << "IPÖÃ»»£º" << pk.ToString() << endl;
+		Bit rk = pManager->InversePermutation(pk, &Tp);
+		cout << "ÄæÖÃ»»£º" << rk.ToString() << endl;
+
+		Bit dat(12345678987654321LL);
+		cout << "Bit£º   " << dat.ToString() << endl;
+		Bit res = pManager->Permutation(dat, tb[0]);
+		cout << "IPÖÃ»»£º" << res.ToString() << endl;
+		Bit bak = pManager->InversePermutation(res, tb[0]);
+		cout << "ÄæÖÃ»»£º" << bak.ToString() << endl;
+
+		Bit bit(123456789, 32);
+		cout << "Bit£º   " << bit.ToString() << endl;
+		Bit ebit = pManager->Permutation(bit, tb[4]);
+		cout << "À©Ôö£º  " << ebit.ToString() << endl;
+		cout << endl;
+	}
+
+	void TestBox() {
+		cout << "¿ªÊ¼²âÊÔS-Box" << endl << "=====================" << endl;
+		auto bxManager = DesSBoxManager::Instance();
+		ISBox* a[9];
+		for (int i = 1; i <= 8; i++) {
+			a[i] = bxManager->GetSBox(i);
+		}
+		for (int i = 1; i <= 8; i++) {
+			cout << "-------- box " << i << "---------" << endl;
+			for (int j = 0; j < 4; j++) {
+				for (int k = 0; k < 16; k++) {
+					cout << a[i]->Get(j, k).ToULL() << " ";
+				}
+				cout << endl;
+			}
+			cout << endl;
+		}
+		Bit bit(103, 6);
+		Bit res = a[1]->Get(bit);
+		cout<<"Bit = " << bit.ToString() << endl;
+		cout <<"Box = " << res.ToString() << endl;
+		cout << res.ToULL() << endl;
+		cout << endl;
+	}
+
+	void TestKey() {
+		cout << "¿ªÊ¼²âÊÔKeyManager" << endl << "=====================" << endl;
+		auto kManager = KeyManager::Instance();
+		Bit key(987654321123456798LL);
+		cout << "Key = " << key.ToString() << endl;
+		kManager->Reset(key);
+		for (int i = 0; i < 16; i++) {
+			auto k = kManager->GetNextKey();
+			cout << "Key-" << i + 1 << " = " << k.ToString() << endl;
+		}
+		cout << endl;
+	}
+
+	void TestDES() {
+		cout << "¿ªÊ¼²âÊÔDataEncryptionStandard" << endl << "=====================" << endl;
+		auto des = new DataEncryptionStandard();
+		Bit key(12345678987654321);
+		Bit txt(199311170017);
+		cout << "Key = " << key.ToString() << endl;
+		cout << "txt = " << txt.ToString() << endl;
+		des->SetMasterKey(key);
+		Bit msg = des->Encryption(txt);
+		cout << "msg = " << msg.ToString() << endl;
+		Bit res = des->Decryption(msg);
+		cout << "res = " << res.ToString() << endl;
+	}
+
 	void TestAll() {
+#ifdef TEST_BASE
 		TestBit();
+		TestPermutation();
+		TestBox();
+		TestKey();
+#endif // TEST_BASE
+		TestDES();
+
+		system("pause");
 	}
 }

@@ -6,7 +6,6 @@
 int _tmain(int argc, _TCHAR* argv[])
 {
 	TestPackage::TestAll();
-	system("pause");
 	return 0;
 }
 

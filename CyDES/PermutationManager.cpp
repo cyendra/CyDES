@@ -19,7 +19,7 @@ Bit PermutationManager::InversePermutation(Bit bit, IPermutationTable* table) {
 	int n = table->Size();
 	Bit res(0, sz);
 	for (int i = 0; i < n; i++) {
-		if (bit[i]) res.Set(table->Get(i));
+		if (bit[i]) res.Set(table->Get(i) - 1);
 	}
 	return res;
 }

@@ -10,14 +10,14 @@ KeyManager::KeyManager() :cnt(0) {
 }
 KeyManager::~KeyManager(){}
 
-std::shared_ptr<KeyManager> KeyManager::Instance() {
-	std::shared_ptr<KeyManager> keyManager = std::shared_ptr<KeyManager>(new KeyManager());
+std::shared_ptr<IKeyManager> KeyManager::Instance() {
+	auto keyManager = std::shared_ptr<IKeyManager>(new KeyManager());
 	return keyManager;
 }
 
 void KeyManager::Reset(Bit MasterKey) {
 	cnt = 0;
-	IPermutationTable* pc1 = tbManager->GetPC1Table();
+	auto pc1 = tbManager->GetPC1Table();
 	Bit bit = pManager->Permutation(MasterKey, pc1);
 	auto pir = Bit::Split(bit);
 	Ci = pir.first;
@@ -25,11 +25,11 @@ void KeyManager::Reset(Bit MasterKey) {
 }
 
 Bit KeyManager::GetNextKey() {
-	if (cnt >= 16) cnt = 0;
+	cnt %= 16;
 	Ci.LeftRotate(LsTable[cnt]);
 	Di.LeftRotate(LsTable[cnt]);
 	Bit Key = Bit::Merge(Ci, Di);
-	IPermutationTable* pc2 = tbManager->GetPC2Table();
+	auto pc2 = tbManager->GetPC2Table();
 	Key = pManager->Permutation(Key, pc2);
 	cnt++;
 	return Key;
