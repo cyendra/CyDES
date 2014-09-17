@@ -2,12 +2,11 @@
 //
 
 #include "stdafx.h"
-#include "SBox.h"
-
+#include "TestPackage.h"
 int _tmain(int argc, _TCHAR* argv[])
 {
-	SBox t = { { 123 }, { 213 } };
-
+	TestPackage::TestAll();
+	system("pause");
 	return 0;
 }
 

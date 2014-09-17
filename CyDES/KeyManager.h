@@ -14,6 +14,6 @@ public:
 	virtual ~KeyManager();
 	virtual void Reset(Bit MasterKey);
 	virtual Bit GetNextKey();
-	static KeyManager* Instance();
+	static std::shared_ptr<KeyManager> Instance();
 };
 

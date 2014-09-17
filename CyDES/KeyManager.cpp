@@ -10,9 +10,9 @@ KeyManager::KeyManager() :cnt(0) {
 }
 KeyManager::~KeyManager(){}
 
-KeyManager* KeyManager::Instance() {
-	static KeyManager keyManager;
-	return &keyManager;
+std::shared_ptr<KeyManager> KeyManager::Instance() {
+	std::shared_ptr<KeyManager> keyManager = std::shared_ptr<KeyManager>(new KeyManager());
+	return keyManager;
 }
 
 void KeyManager::Reset(Bit MasterKey) {

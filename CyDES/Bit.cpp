@@ -9,7 +9,7 @@ Bit::Bit(unsigned long long _bit) : size(64), bit(_bit) {}
 Bit::Bit(unsigned long long _bit, int n) {
 	n = std::min(64, n);
 	n = std::max(1, n);
-	unsigned long long mask = (1LL << size) - 1;
+	unsigned long long mask = mask = (1LL << n) - 1;
 	bit = _bit & mask;
 	size = n;
 }
@@ -45,18 +45,21 @@ void Bit::LeftRotate(int d) {
 
 std::pair<Bit, Bit> Bit::Split(Bit bit) {
 	int n = bit.size / 2;
-	unsigned long long mask = (1LL << n) - 1;
-	unsigned long long R = bit.bit & mask;
-	unsigned long long L = bit.bit >> n;
+	volatile unsigned long long mask = (1LL << n) - 1;
+	volatile unsigned long long R = bit.bit & mask;
+	volatile unsigned long long L = bit.bit >> n;
 	Bit bitL(L, n);
 	Bit bitR(R, n);
-	return std::make_pair(bitL, bitR);
+	auto res = std::make_pair(bitL, bitR);
+	return res;
 }
 
 Bit Bit::Merge(Bit L, Bit R) {
-	int n = L.size;
-	int m = R.size;
-	unsigned long long t = L.bit << n;
+	volatile int n = L.size;
+	volatile int m = R.size;
+	volatile unsigned long long lb = L.bit;
+	volatile unsigned long long rb = R.bit;
+	volatile unsigned long long t = lb << m | rb;
 	Bit bit(t, n + m);
 	return bit;
 }
@@ -123,8 +126,8 @@ unsigned long long Bit::ToULL() {
 std::string Bit::ToString() {
 	std::string res;
 	for (int i = 0; i < size; i++) {
-		if (operator[](i)) res.push_back('0');
-		else res.push_back('1');
+		if (operator[](i)) res.push_back('1');
+		else res.push_back('0');
 	}
 	return res;
 }
