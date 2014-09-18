@@ -22,3 +22,19 @@ IEncryptor接口则是最后一层外壳，它是整个程序与外界交互的�
    
 IMode操作模式的接口，将数据分组加密。  
   
+   
+使用示例  
+----  
+测试代码：  
+    string str("Des Encryptor Text");  
+    auto encryptor = DesEncryptor();  
+    auto dat = encryptor->EncryptString(str, 64位秘钥, DesEncryptor::ECB);  
+    cout << "密文：";  
+    for each (unsigned char var in res) cout << (int)var << " ";   
+    cout << endl;  
+    auto txt = encryptor->DecryptString(dat, 64位秘钥, DesEncryptor::ECB);  
+    cout << "明文：";  
+    for each (unsigned char var in str) cout << (int)var << " "; cout << endl;  
+    cout << txt << endl;  
+
+测试结果：
