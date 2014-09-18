@@ -20,7 +20,10 @@ public:
 
 	Bit(const Bit& b);
 	Bit& operator=(Bit& b);
-	Bit& operator=(unsigned char num);
+	//Bit& operator=(unsigned char num);
+	
+	// 由byte构造8位Bit对象
+	void Byte(unsigned char num);
 
 	// 直接左移d位
 	void LeftShift(int d);

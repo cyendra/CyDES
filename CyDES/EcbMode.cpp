@@ -12,8 +12,8 @@ std::vector<unsigned char> EcbMode::EncryptBinary(IDes* des, const std::vector<u
 	int sp = n % 8;
 	for (int i = 0; i < n; i += 8) {
 		for (int j = 0; j < 8; j++) {
-			if (i + j >= n) bits[j] = 0;
-			else bits[j] = bins[i + j];
+			if (i + j >= n) bits[j].Byte(0);
+			else bits[j].Byte(bins[i + j]);
 		}
 		Bit b = Bit::Merge(bits, 0, 7);
 		b = des->Encryption(b);
@@ -33,8 +33,8 @@ std::vector<unsigned char> EcbMode::DecryptBinary(IDes* des, const std::vector<u
 	int sp = n % 8;
 	for (int i = 0; i < n; i += 8) {
 		for (int j = 0; j < 8; j++) {
-			if (i + j >= n) bits[j] = 0;
-			else bits[j] = bins[i + j];
+			if (i + j >= n) bits[j].Byte(0);
+			else bits[j].Byte(bins[i + j]);
 		}
 		Bit b = Bit::Merge(bits, 0, 7);
 		b = des->Decryption(b);

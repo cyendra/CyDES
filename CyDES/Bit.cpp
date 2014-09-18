@@ -22,10 +22,16 @@ Bit& Bit::operator=(Bit& b) {
 	return *this;
 }
 
+/*
 Bit& Bit::operator=(unsigned char num) {
 	bit = num;
 	size = 8;
 	return *this;
+}
+*/
+void Bit::Byte(unsigned char num) {
+	bit = num;
+	size = 8;
 }
 
 #pragma endregion

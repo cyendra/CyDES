@@ -315,15 +315,7 @@ namespace TestPackage {
 		encryptor->SaveBinaryAsFile(sec, "ans.txt");
 	}
 
-	void TestAll() {
-#ifdef TEST_BASE
-		TestBit();
-		TestPermutation();
-		TestBox();
-		TestKey();
-		TestDES();
-#endif // TEST_BASE
-		//TestMode();
+	void Example() {
 		string str("Des Encryptor Text");
 		auto encryptor = new DesEncryptor();
 		unsigned long long Key = 12345678987654321LL;
@@ -335,6 +327,18 @@ namespace TestPackage {
 		cout << "Ã÷ÎÄ£º";
 		for each (unsigned char var in txt) cout << (int)var << " "; cout << endl;
 		cout << txt << endl;
+	}
+
+	void TestAll() {
+#ifdef TEST_BASE
+		TestBit();
+		TestPermutation();
+		TestBox();
+		TestKey();
+		TestDES();
+		TestMode();
+#endif // TEST_BASE
+		Example();
 		system("pause");
 	}
 }
