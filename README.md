@@ -35,7 +35,8 @@ IMode操作模式的接口，将数据分组加密。
 		`cout << endl;`  
 		`auto txt = encryptor->DecryptString(dat, Key, DesEncryptor::ECB);`  
 		`cout << "明文：";`  
-		`for each (unsigned char var in txt) cout << (int)var << " "; cout << endl;`  
+		`for each (unsigned char var in txt) cout << (int)var << " ";`
+		`cout << endl;`  
 		`cout << txt << endl;`  
 
 测试结果：  
