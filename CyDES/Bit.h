@@ -20,6 +20,7 @@ public:
 
 	Bit(const Bit& b);
 	Bit& operator=(Bit& b);
+	Bit& operator=(unsigned char num);
 
 	// 直接左移d位
 	void LeftShift(int d);
@@ -72,6 +73,9 @@ public:
 
 	// 静态方法，将数据bit从中间分割为两份数据
 	static std::pair<Bit, Bit> Split(Bit bit);
+
+	// 静态方法，把数据bit平分为n份，必须保证bit可分
+	static std::vector<Bit> Split(Bit bit, int n);
 
 	// 静态方法，将两份数据合并为一份数据
 	static Bit Merge(Bit L, Bit R);

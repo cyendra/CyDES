@@ -64,6 +64,9 @@
     <Filter Include="头文件\Encryptor">
       <UniqueIdentifier>{0a5bfd91-d937-4a8c-aa89-822c77d66bf7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\Encryptor">
+      <UniqueIdentifier>{265d6c8e-d2ce-4eb5-a8e0-e33a4c02263c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -135,6 +138,24 @@
     <ClInclude Include="IEncryptor.h">
       <Filter>头文件\Encryptor</Filter>
     </ClInclude>
+    <ClInclude Include="IMode.h">
+      <Filter>头文件\Encryptor</Filter>
+    </ClInclude>
+    <ClInclude Include="EcbMode.h">
+      <Filter>头文件\Encryptor</Filter>
+    </ClInclude>
+    <ClInclude Include="CbcMode.h">
+      <Filter>头文件\Encryptor</Filter>
+    </ClInclude>
+    <ClInclude Include="CfbMode.h">
+      <Filter>头文件\Encryptor</Filter>
+    </ClInclude>
+    <ClInclude Include="DesEncryptor.h">
+      <Filter>头文件\Encryptor</Filter>
+    </ClInclude>
+    <ClInclude Include="OfbMode.h">
+      <Filter>头文件\Encryptor</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -172,6 +193,21 @@
     </ClCompile>
     <ClCompile Include="DataEncryptionStandard.cpp">
       <Filter>源文件\DES</Filter>
+    </ClCompile>
+    <ClCompile Include="EcbMode.cpp">
+      <Filter>源文件\Encryptor</Filter>
+    </ClCompile>
+    <ClCompile Include="DesEncryptor.cpp">
+      <Filter>源文件\Encryptor</Filter>
+    </ClCompile>
+    <ClCompile Include="CfbMode.cpp">
+      <Filter>源文件\Encryptor</Filter>
+    </ClCompile>
+    <ClCompile Include="CbcMode.cpp">
+      <Filter>源文件\Encryptor</Filter>
+    </ClCompile>
+    <ClCompile Include="OfbMode.cpp">
+      <Filter>源文件\Encryptor</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

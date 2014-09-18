@@ -80,20 +80,26 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bit.h" />
+    <ClInclude Include="CbcMode.h" />
+    <ClInclude Include="CfbMode.h" />
     <ClInclude Include="common.h" />
     <ClInclude Include="DataEncryptionStandard.h" />
+    <ClInclude Include="DesEncryptor.h" />
     <ClInclude Include="DesFunction.h" />
     <ClInclude Include="DesPmtTableManager.h" />
     <ClInclude Include="DesSBoxManager.h" />
+    <ClInclude Include="EcbMode.h" />
     <ClInclude Include="IDes.h" />
     <ClInclude Include="IEncryptor.h" />
     <ClInclude Include="IFunction.h" />
+    <ClInclude Include="IMode.h" />
     <ClInclude Include="IPermutationManager.h" />
     <ClInclude Include="IPermutationTable.h" />
     <ClInclude Include="IPmtTableManager.h" />
     <ClInclude Include="ISBox.h" />
     <ClInclude Include="ISBoxManager.h" />
     <ClInclude Include="KeyManager.h" />
+    <ClInclude Include="OfbMode.h" />
     <ClInclude Include="PermutationManager.h" />
     <ClInclude Include="PmtTableDynamic.h" />
     <ClInclude Include="PmtTableStatic.h" />
@@ -105,12 +111,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Bit.cpp" />
+    <ClCompile Include="CbcMode.cpp" />
+    <ClCompile Include="CfbMode.cpp" />
     <ClCompile Include="CyDES.cpp" />
     <ClCompile Include="DataEncryptionStandard.cpp" />
+    <ClCompile Include="DesEncryptor.cpp" />
     <ClCompile Include="DesFunction.cpp" />
     <ClCompile Include="DesPmtTableManager.cpp" />
     <ClCompile Include="DesSBoxManager.cpp" />
+    <ClCompile Include="EcbMode.cpp" />
     <ClCompile Include="KeyManager.cpp" />
+    <ClCompile Include="OfbMode.cpp" />
     <ClCompile Include="PermutationManager.cpp" />
     <ClCompile Include="PmtTableDynamic.cpp" />
     <ClCompile Include="PmtTableStatic.cpp" />

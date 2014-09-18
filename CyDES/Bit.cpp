@@ -8,7 +8,7 @@ Bit::Bit(unsigned long long _bit) : size(64), bit(_bit) {}
 Bit::Bit(unsigned long long _bit, int n) {
 	n = std::min(64, n);
 	n = std::max(1, n);
-	unsigned long long mask = mask = (1LL << n) - 1;
+	unsigned long long mask = (1LL << n) - 1;
 	bit = _bit & mask;
 	size = n;
 }
@@ -16,9 +16,15 @@ Bit::Bit(const Bit& b) {
 	bit = b.bit;
 	size = b.size;
 }
-Bit& Bit::operator = (Bit& b) {
+Bit& Bit::operator=(Bit& b) {
 	bit = b.bit;
 	size = b.size;
+	return *this;
+}
+
+Bit& Bit::operator=(unsigned char num) {
+	bit = num;
+	size = 8;
 	return *this;
 }
 
@@ -50,6 +56,24 @@ std::pair<Bit, Bit> Bit::Split(Bit bit) {
 	Bit bitL(L, n);
 	Bit bitR(R, n);
 	auto res = std::make_pair(bitL, bitR);
+	return res;
+}
+
+std::vector<Bit> Bit::Split(Bit bit, int n) {
+	std::vector<Bit> res;
+	if (n == 1) {
+		res.push_back(bit);
+		return res;
+	}
+	auto pir = Split(bit);
+	auto lv = Split(pir.first, n / 2);
+	auto rv = Split(pir.second, n / 2);
+	for each (Bit var in lv) {
+		res.push_back(var);
+	}
+	for each (Bit var in rv) {
+		res.push_back(var);
+	}
 	return res;
 }
 
