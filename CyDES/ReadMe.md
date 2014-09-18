@@ -80,6 +80,24 @@ Encryptor包:
 IEncryptor.h  
 	加密器接口。  
 	  
+DesEncryptor.h, DesEncryptor.cpp  
+	加密器的实现，可选四种模式。
+	  
+IMode.h  
+	区块加密法的操作模式接口。  
+
+EcbMode.h, EcbMode.cpp  
+	Electronic CodeBook mode。用于短数据加密时非常理想，用于长消息时不够安全。
+
+CbcMode.h, CbcMode.cpp  
+	CBC模式。
+
+CfbMode.h, CfbMode.cpp  
+	CFB模式，尚未实现。  
+	  
+OfbMode.h, OfbMode.cpp   
+	OFB模式，尚未实现。  
+	  
 ------  
 Permutation包:    
   

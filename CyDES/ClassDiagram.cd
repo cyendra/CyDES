@@ -1,70 +1,70 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Bit" Collapsed="true">
-    <Position X="12.25" Y="0.5" Width="1.5" />
+    <Position X="1.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAAAAAAAIhAAECIAAAAUIAAEAgQAQCAAgAAEAAAg=</HashCode>
       <FileName>Bit.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DesSBoxManager" Collapsed="true">
-    <Position X="9.75" Y="3.25" Width="1.5" />
+    <Position X="5.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAQCAAAAAAAAA=</HashCode>
       <FileName>DesSBoxManager.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ISBox" Collapsed="true">
-    <Position X="3.5" Y="7.5" Width="1.5" />
+    <Position X="6.75" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ISBox.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ISBoxManager" Collapsed="true">
-    <Position X="9.75" Y="1.75" Width="1.5" />
+    <Position X="5.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
       <FileName>ISBoxManager.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SBox" Collapsed="true">
-    <Position X="3.5" Y="8.75" Width="1.5" />
+    <Position X="6.75" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIAAAAAAAAAAAABAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SBox.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="KeyManager" Collapsed="true">
-    <Position X="0.75" Y="3.25" Width="1.5" />
+    <Position X="1.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAIAAAACAAAAAICAAAAACBAAAAAAAAAQAAAAAAAAAA=</HashCode>
       <FileName>KeyManager.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="IKeyManager" Collapsed="true">
-    <Position X="0.75" Y="1.75" Width="1.5" />
+    <Position X="1.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IKeyManager.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="IPermutationManager" Collapsed="true">
-    <Position X="5.25" Y="1.75" Width="1.5" />
+    <Position X="3.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IPermutationManager.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PermutationManager" Collapsed="true">
-    <Position X="5.25" Y="3.25" Width="1.5" />
+    <Position X="3.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAgAAAAAAAAAAAAQAAAAAAAAIAQAAAAQAAAAAAAAAA=</HashCode>
       <FileName>PermutationManager.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DesPmtTableManager" Collapsed="true">
-    <Position X="3" Y="3.25" Width="1.5" />
+    <Position X="8" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAAgAAAAAAAgIAAIAAAAAQAAAQQAAAAA=</HashCode>
       <FileName>DesPmtTableManager.h</FileName>
@@ -78,73 +78,132 @@
     </TypeIdentifier>
   </Class>
   <Class Name="IPmtTableManager" Collapsed="true">
-    <Position X="3" Y="1.75" Width="1.5" />
+    <Position X="8" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAAgAAAAAAAgAAAAAAAAAAAAAQQAAAAA=</HashCode>
       <FileName>IPmtTableManager.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DesIpTable" Collapsed="true">
-    <Position X="3" Y="5.75" Width="1.5" />
+    <Position X="0.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PmtTableDynamic.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DesIpRevTable" Collapsed="true">
-    <Position X="5.25" Y="5.75" Width="1.5" />
+    <Position X="3" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PmtTableDynamic.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DesETable" Collapsed="true">
-    <Position X="7.5" Y="5.75" Width="1.5" />
+    <Position X="5.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PmtTableDynamic.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PmtTableStatic" Collapsed="true">
-    <Position X="0.75" Y="5.75" Width="1.5" />
+    <Position X="7.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABAAAAAAAAAgABEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PmtTableStatic.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DesFunction" Collapsed="true">
-    <Position X="7.5" Y="3.25" Width="1.5" />
+    <Position X="10.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAAAAAAACAAAAAAAAAACACAAAAAAAAAAwAQAAAAAAAA=</HashCode>
       <FileName>DesFunction.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="IFunction" Collapsed="true">
-    <Position X="7.5" Y="1.75" Width="1.5" />
+    <Position X="10.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
       <FileName>IFunction.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Uncopyable" Collapsed="true">
-    <Position X="5.25" Y="0.5" Width="1.5" />
+    <Position X="5.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAgAAAAEAA=</HashCode>
       <FileName>common.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DataEncryptionStandard" Collapsed="true">
-    <Position X="0.5" Y="8.75" Width="1.5" />
+    <Position X="3.75" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAIACAEAkAAACAAAACACAAAAAAAAAACAgA=</HashCode>
       <FileName>DataEncryptionStandard.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="IDes" Collapsed="true">
-    <Position X="0.5" Y="7.5" Width="1.5" />
+    <Position X="3.75" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAACAgA=</HashCode>
       <FileName>IDes.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IEncryptor" Collapsed="true">
+    <Position X="0.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABCAAAAIAAAAAAAAAACAAAAAEAIAAAAAAA=</HashCode>
+      <FileName>IEncryptor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IMode" Collapsed="true">
+    <Position X="4" Y="10.25" Width="1.5" />
+    <InheritanceLine Type="Uncopyable" ManuallyRouted="true">
+      <Path>
+        <Point X="6.5" Y="1.048" />
+        <Point X="6.5" Y="1.375" />
+        <Point X="12.615" Y="1.375" />
+        <Point X="12.615" Y="9.875" />
+        <Point X="4.75" Y="9.875" />
+        <Point X="4.75" Y="10.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>IMode.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EcbMode" Collapsed="true">
+    <Position X="7.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQEAAACAIAAA=</HashCode>
+      <FileName>EcbMode.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CbcMode" Collapsed="true">
+    <Position X="0.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAABAAAAAAAAAAAAAAEAAAAAAQEAAAAAAAAA=</HashCode>
+      <FileName>CbcMode.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CfbMode" Collapsed="true">
+    <Position X="2.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAABAAAAAAAAAAAAAAAAAAAAgQEAAAAAAAAA=</HashCode>
+      <FileName>CfbMode.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesEncryptor" Collapsed="true">
+    <Position X="0.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAABCAAAAIAAAgAAAAAACAAAAAEAIAAAAAAQ=</HashCode>
+      <FileName>DesEncryptor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfbMode" Collapsed="true">
+    <Position X="5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAABAAAAAAAAAAgAAAAAAAAAAQEAAAAAAAAA=</HashCode>
+      <FileName>OfbMode.h</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Microsoft YaHei UI" Size="9" />
