@@ -323,8 +323,18 @@ namespace TestPackage {
 		TestKey();
 		TestDES();
 #endif // TEST_BASE
-		TestMode();
-
+		//TestMode();
+		string str("Des Encryptor Text");
+		auto encryptor = new DesEncryptor();
+		unsigned long long Key = 12345678987654321LL;
+		auto dat = encryptor->EncryptString(str, Key, DesEncryptor::ECB);
+		cout << "ÃÜÎÄ£º";
+		for each (unsigned char var in dat) cout << (int)var << " ";
+		cout << endl;
+		auto txt = encryptor->DecryptString(dat, Key, DesEncryptor::ECB);
+		cout << "Ã÷ÎÄ£º";
+		for each (unsigned char var in txt) cout << (int)var << " "; cout << endl;
+		cout << txt << endl;
 		system("pause");
 	}
 }
