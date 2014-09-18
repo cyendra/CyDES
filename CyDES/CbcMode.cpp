@@ -10,10 +10,12 @@ std::vector<unsigned char> CbcMode::EncryptBinary(IDes* des, const std::vector<u
 	int n = bins.size();
 	Bit bits[8];
 	Bit lst;
-	int sp = n % 8;
-	for (int i = 0; i < n; i += 8) {
+	int sp = 8 - n % 8;
+	int m = n;
+	if (sp == 8) m = n + 1;
+	for (int i = 0; i < m; i += 8) {
 		for (int j = 0; j < 8; j++) {
-			if (i + j >= n) bits[j].Byte(0);
+			if (i + j >= n) bits[j].Byte(sp);
 			else bits[j].Byte(bins[i + j]);
 		}
 		Bit b = Bit::Merge(bits, 0, 7);
@@ -35,11 +37,10 @@ std::vector<unsigned char> CbcMode::DecryptBinary(IDes* des, const std::vector<u
 	Bit bits[8];
 	Bit lst;
 	Bit tmp;
-	int sp = n % 8;
+	if (n % 8 != 0) return ans;
 	for (int i = 0; i < n; i += 8) {
 		for (int j = 0; j < 8; j++) {
-			if (i + j >= n) bits[j].Byte(0);
-			else bits[j].Byte(bins[i + j]);
+			bits[j].Byte(bins[i + j]);
 		}
 		Bit b = Bit::Merge(bits, 0, 7);
 		tmp = b;
@@ -51,6 +52,8 @@ std::vector<unsigned char> CbcMode::DecryptBinary(IDes* des, const std::vector<u
 			ans.push_back((unsigned char)var.ToULL());
 		}
 	}
+	int bk = *ans.rbegin();
+	for (int i = 0; i < bk; i++) ans.pop_back();
 	return ans;
 }
 

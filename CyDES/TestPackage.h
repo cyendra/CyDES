@@ -327,6 +327,17 @@ namespace TestPackage {
 		cout << "明文：";
 		for each (unsigned char var in txt) cout << (int)var << " "; cout << endl;
 		cout << txt << endl;
+
+		str = "123456781234567812345678";
+		Key = 12345678987654321LL;
+		dat = encryptor->EncryptString(str, Key, DesEncryptor::CBC);
+		cout << "密文：";
+		for each (unsigned char var in dat) cout << (int)var << " ";
+		cout << endl;
+		txt = encryptor->DecryptString(dat, Key, DesEncryptor::CBC);
+		cout << "明文：";
+		for each (unsigned char var in txt) cout << (int)var << " "; cout << endl;
+		cout << txt << endl;
 	}
 
 	void TestAll() {
