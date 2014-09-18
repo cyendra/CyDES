@@ -1,11 +1,13 @@
 #pragma once
 
 #include "IEncryptor.h"
-
+#include "IDes.h"
 /*
 	加密器外壳
 */
 class DesEncryptor :public IEncryptor {
+private:
+	std::shared_ptr<IDes> des;
 public:
 	DesEncryptor();
 	virtual ~DesEncryptor();
@@ -14,7 +16,7 @@ public:
 	virtual std::vector<unsigned char> EncryptString(const std::string& string, Bit MasterKey, Type type);
 
 	// 解密字符串
-	virtual std::vector<unsigned char> DecryptString(const std::string& string, Bit MasterKey, Type type);
+	virtual std::string DecryptString(const std::vector<unsigned char>& bins, Bit MasterKey, Type type);
 
 	// 加密二进制串
 	virtual std::vector<unsigned char> EncryptBinary(const std::vector<unsigned char>& bins, Bit MasterKey, Type type);

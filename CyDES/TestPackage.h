@@ -12,6 +12,7 @@
 #include "ISBox.h"
 #include "KeyManager.h"
 #include "DataEncryptionStandard.h"
+#include "DesEncryptor.h"
 namespace TestPackage {
 	using namespace std;
 	void TestBit() {
@@ -263,14 +264,66 @@ namespace TestPackage {
 		cout << "res = " << res.ToString() << endl;
 	}
 
+	void TestMode() {
+		cout << "开始测试Encryptor" << endl << "=====================" << endl;
+		vector<unsigned char> v{ 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49 };
+		auto encryptor = shared_ptr<DesEncryptor>(new DesEncryptor());
+		auto r = encryptor->EncryptBinary(v, 12345678987654LL, DesEncryptor::ECB);
+		cout << "密文：";
+		for each (unsigned char var in r) cout << (int)var << " "; cout << endl;
+		auto t = encryptor->DecryptBinary(r, 12345678987654LL, DesEncryptor::ECB);
+		cout << "明文：";
+		for each (unsigned char var in t) cout << (int)var << " "; cout << endl;
+		cout << endl;
+
+		string s("abcdefgasdf123");
+		auto res = encryptor->EncryptString(s, 12345678987654LL, DesEncryptor::ECB);
+		cout << "密文：";
+		for each (unsigned char var in res) cout << (int)var << " "; cout << endl;
+		auto str = encryptor->DecryptString(res, 12345678987654LL, DesEncryptor::ECB);
+		cout << "明文：";
+		for each (unsigned char var in str) cout << (int)var << " "; cout << endl;
+		cout << str << endl;
+	
+		v = { 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49 };
+		r = encryptor->EncryptBinary(v, 12345678987654LL, DesEncryptor::CBC);
+		cout << "密文：";
+		for each (unsigned char var in r) cout << (int)var << " "; cout << endl;
+		t = encryptor->DecryptBinary(r, 12345678987654LL, DesEncryptor::CBC);
+		cout << "明文：";
+		for each (unsigned char var in t) cout << (int)var << " "; cout << endl;
+		cout << endl;
+
+		s = "abcdefgasdf123";
+		res = encryptor->EncryptString(s, 12345678987654LL, DesEncryptor::CBC);
+		cout << "密文：";
+		for each (unsigned char var in res) cout << (int)var << " "; cout << endl;
+		str = encryptor->DecryptString(res, 12345678987654LL, DesEncryptor::CBC);
+		cout << "明文：";
+		for each (unsigned char var in str) cout << (int)var << " "; cout << endl;
+		cout << str << endl;
+		cout << endl;
+		
+		cout << "开始测试文件操作" << endl << "=====================" << endl;
+		auto file = encryptor->EncryptFile("text.txt",12345678987654LL,DesEncryptor::CBC);
+		cout << "密文：";
+		for each (unsigned char var in file) cout << (int)var << " "; cout << endl;
+		encryptor->SaveBinaryAsFile(file, "sec.bit");
+		auto sec = encryptor->DecryptFile("sec.bit", 12345678987654LL, DesEncryptor::CBC);
+		cout << "明文：";
+		for each (unsigned char var in sec) cout << (int)var << " "; cout << endl;
+		encryptor->SaveBinaryAsFile(sec, "ans.txt");
+	}
+
 	void TestAll() {
 #ifdef TEST_BASE
 		TestBit();
 		TestPermutation();
 		TestBox();
 		TestKey();
-#endif // TEST_BASE
 		TestDES();
+#endif // TEST_BASE
+		TestMode();
 
 		system("pause");
 	}

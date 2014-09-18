@@ -65,15 +65,12 @@ std::vector<Bit> Bit::Split(Bit bit, int n) {
 		res.push_back(bit);
 		return res;
 	}
+	if (bit.size % n != 0 || n % 2 != 0) return res;
 	auto pir = Split(bit);
 	auto lv = Split(pir.first, n / 2);
 	auto rv = Split(pir.second, n / 2);
-	for each (Bit var in lv) {
-		res.push_back(var);
-	}
-	for each (Bit var in rv) {
-		res.push_back(var);
-	}
+	for each (Bit var in lv) res.push_back(var);
+	for each (Bit var in rv) res.push_back(var);
 	return res;
 }
 

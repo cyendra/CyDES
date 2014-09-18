@@ -18,7 +18,7 @@ public:
 	virtual std::vector<unsigned char> EncryptString(const std::string& string, Bit MasterKey, Type type) = 0;
 	
 	// 解密字符串
-	virtual std::vector<unsigned char> DecryptString(const std::string& string, Bit MasterKey, Type type) = 0;
+	virtual std::string DecryptString(const std::vector<unsigned char>& bins, Bit MasterKey, Type type) = 0;
 	
 	// 加密二进制串
 	virtual std::vector<unsigned char> EncryptBinary(const std::vector<unsigned char>& bins, Bit MasterKey, Type type) = 0;
