@@ -26,20 +26,20 @@ IMode操作模式的接口，将数据分组加密。
 使用示例  
 ----  
 测试代码：  
-		string str("Des Encryptor Text");
-		auto encryptor = new DesEncryptor();
-		unsigned long long Key = 12345678987654321LL;
-		auto dat = encryptor->EncryptString(str, Key, DesEncryptor::ECB);
-		cout << "密文：";
-		for each (unsigned char var in dat) cout << (int)var << " ";
-		cout << endl;
-		auto txt = encryptor->DecryptString(dat, Key, DesEncryptor::ECB);
-		cout << "明文：";
-		for each (unsigned char var in txt) cout << (int)var << " "; cout << endl;
-		cout << txt << endl;
+		`string str("Des Encryptor Text");`  
+		`auto encryptor = new DesEncryptor();`  
+		`unsigned long long Key = 12345678987654321LL;`  
+		`auto dat = encryptor->EncryptString(str, Key, DesEncryptor::ECB);`  
+		`cout << "密文：";`  
+		`for each (unsigned char var in dat) cout << (int)var << " ";`  
+		`cout << endl;`  
+		`auto txt = encryptor->DecryptString(dat, Key, DesEncryptor::ECB);`  
+		`cout << "明文：";`  
+		`for each (unsigned char var in txt) cout << (int)var << " "; cout << endl;`  
+		`cout << txt << endl;`  
 
 测试结果：  
-        密文：202 250 224 84 181 245 248 81 100 101 37 19 213 47 121 157 225 208 149 137 196 45 68 176  
-        明文：68 101 115 32 69 110 99 114 121 112 116 111 114 32 84 101 120 116 0 0 0 0 0 0  
-        Des Encryptor Text    
+密文：202 250 224 84 181 245 248 81 100 101 37 19 213 47 121 157 225 208 149 137 196 45 68 176  
+明文：68 101 115 32 69 110 99 114 121 112 116 111 114 32 84 101 120 116 0 0 0 0 0 0  
+Des Encryptor Text    
 
