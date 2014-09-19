@@ -31,6 +31,12 @@ public:
 	// 循环左移d位
 	void LeftRotate(int d);
 
+	// 直接右移d位
+	void RightShift(int d);
+
+	// 循环右移d位
+	void RightRotate(int d);
+
 	// 将第pos位设置为1
 	// pos从左向右从0开始计数，超过size位时无效
 	void Set(int pos);
@@ -88,5 +94,11 @@ public:
 
 	// 静态方法，求两份数据的异或值
 	static Bit Xor(Bit x, Bit y);
+
+	// 静态方法，求两份数据的OR
+	static Bit Or(Bit x, Bit y);
+
+	// 静态方法，求两份数据的AND
+	static Bit And(Bit x, Bit y);
 };
 

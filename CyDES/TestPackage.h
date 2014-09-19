@@ -316,20 +316,29 @@ namespace TestPackage {
 	}
 
 	void Example() {
-		string str("Des Encryptor Text");
+		string str;
+		string txt;
 		auto encryptor = new DesEncryptor();
 		unsigned long long Key = 12345678987654321LL;
-		auto dat = encryptor->EncryptString(str, Key, DesEncryptor::ECB);
+		vector<unsigned char> dat;
+		
+		//str = "Data Encryption Standard Mode Test";
+		str = "12345678";
+
+		// ECB模式测试
+		cout << "ECB模式测试" << endl;
+		dat = encryptor->EncryptString(str, Key, DesEncryptor::ECB);
 		cout << "密文：";
 		for each (unsigned char var in dat) cout << (int)var << " ";
 		cout << endl;
-		auto txt = encryptor->DecryptString(dat, Key, DesEncryptor::ECB);
+		txt = encryptor->DecryptString(dat, Key, DesEncryptor::ECB);
 		cout << "明文：";
 		for each (unsigned char var in txt) cout << (int)var << " "; cout << endl;
 		cout << txt << endl;
+		cout << endl;
 
-		str = "123456781234567812345678";
-		Key = 12345678987654321LL;
+		// CBC模式测试
+		cout << "CBC模式测试" << endl;
 		dat = encryptor->EncryptString(str, Key, DesEncryptor::CBC);
 		cout << "密文：";
 		for each (unsigned char var in dat) cout << (int)var << " ";
@@ -338,6 +347,31 @@ namespace TestPackage {
 		cout << "明文：";
 		for each (unsigned char var in txt) cout << (int)var << " "; cout << endl;
 		cout << txt << endl;
+		cout << endl;
+
+		// CFB模式测试
+		cout << "CFB模式测试" << endl;
+		dat = encryptor->EncryptString(str, Key, DesEncryptor::CFB);
+		cout << "密文：";
+		for each (unsigned char var in dat) cout << (int)var << " ";
+		cout << endl;
+		txt = encryptor->DecryptString(dat, Key, DesEncryptor::CFB);
+		cout << "明文：";
+		for each (unsigned char var in txt) cout << (int)var << " "; cout << endl;
+		cout << txt << endl;
+		cout << endl;
+
+		// OFB模式测试
+		cout << "OFB模式测试" << endl;
+		dat = encryptor->EncryptString(str, Key, DesEncryptor::OFB);
+		cout << "密文：";
+		for each (unsigned char var in dat) cout << (int)var << " ";
+		cout << endl;
+		txt = encryptor->DecryptString(dat, Key, DesEncryptor::OFB);
+		cout << "明文：";
+		for each (unsigned char var in txt) cout << (int)var << " "; cout << endl;
+		cout << txt << endl;
+		cout << endl;
 	}
 
 	void TestAll() {

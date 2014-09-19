@@ -54,6 +54,15 @@ void Bit::LeftRotate(int d) {
 	bit |= right;
 }
 
+void Bit::RightShift(int d) {
+	bit >>= d;
+}
+
+void Bit::RightRotate(int d) {
+	d %= size;
+	LeftRotate(size - d);
+}
+
 std::pair<Bit, Bit> Bit::Split(Bit bit) {
 	int n = bit.size / 2;
 	volatile unsigned long long mask = (1LL << n) - 1;
@@ -170,6 +179,20 @@ Bit Bit::Merge(Bit b[], int L, int R) {
 Bit Bit::Xor(Bit x, Bit y) {
 	int n = std::max(x.size, y.size);
 	unsigned long long t = x.bit ^ y.bit;
+	Bit ans(t, n);
+	return ans;
+}
+
+Bit Bit::Or(Bit x, Bit y) {
+	int n = std::max(x.size, y.size);
+	unsigned long long t = x.bit | y.bit;
+	Bit ans(t, n);
+	return ans;
+}
+
+Bit Bit::And(Bit x, Bit y) {
+	int n = std::max(x.size, y.size);
+	unsigned long long t = x.bit & y.bit;
 	Bit ans(t, n);
 	return ans;
 }
