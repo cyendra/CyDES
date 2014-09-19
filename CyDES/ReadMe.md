@@ -93,10 +93,10 @@ CbcMode.h, CbcMode.cpp
 	CBC模式。
 
 CfbMode.h, CfbMode.cpp  
-	CFB模式，尚未实现。  
+	CFB模式。  
 	  
 OfbMode.h, OfbMode.cpp   
-	OFB模式，尚未实现。  
+	OFB模式。  
 	  
 ------  
 Permutation包:    
