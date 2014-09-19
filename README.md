@@ -31,11 +31,12 @@ IMode操作模式的接口，将数据分组加密。
 		string str;
 		string txt;
 		auto encryptor = new DesEncryptor();
-		unsigned long long Key = 12345678987654321LL;
+		unsigned long long Key;
 		vector<unsigned char> dat;
-		
+
 		//str = "Data Encryption Standard Mode Test";
 		str = "12345678";
+		Key = 12345678987654321LL;
 
 		// ECB模式测试
 		cout << "ECB模式测试" << endl;
@@ -45,9 +46,8 @@ IMode操作模式的接口，将数据分组加密。
 		cout << endl;
 		txt = encryptor->DecryptString(dat, Key, DesEncryptor::ECB);
 		cout << "明文：";
-		for each (unsigned char var in txt) cout << (int)var << " "; cout << endl;
-		cout << txt << endl;
-		cout << endl;
+		for each (unsigned char var in txt) cout << (int)var << " ";
+		cout << endl << txt << endl << endl;
 
 		// CBC模式测试
 		cout << "CBC模式测试" << endl;
@@ -57,9 +57,8 @@ IMode操作模式的接口，将数据分组加密。
 		cout << endl;
 		txt = encryptor->DecryptString(dat, Key, DesEncryptor::CBC);
 		cout << "明文：";
-		for each (unsigned char var in txt) cout << (int)var << " "; cout << endl;
-		cout << txt << endl;
-		cout << endl;
+		for each (unsigned char var in txt) cout << (int)var << " ";
+		cout << endl << txt << endl << endl;
 
 		// CFB模式测试
 		cout << "CFB模式测试" << endl;
@@ -69,9 +68,8 @@ IMode操作模式的接口，将数据分组加密。
 		cout << endl;
 		txt = encryptor->DecryptString(dat, Key, DesEncryptor::CFB);
 		cout << "明文：";
-		for each (unsigned char var in txt) cout << (int)var << " "; cout << endl;
-		cout << txt << endl;
-		cout << endl;
+		for each (unsigned char var in txt) cout << (int)var << " ";
+		cout << endl << txt << endl << endl;
 
 		// OFB模式测试
 		cout << "OFB模式测试" << endl;
@@ -81,15 +79,13 @@ IMode操作模式的接口，将数据分组加密。
 		cout << endl;
 		txt = encryptor->DecryptString(dat, Key, DesEncryptor::OFB);
 		cout << "明文：";
-		for each (unsigned char var in txt) cout << (int)var << " "; cout << endl;
-		cout << txt << endl;
-		cout << endl;
+		for each (unsigned char var in txt) cout << (int)var << " "; 
+		cout << endl << txt << endl << endl;
 	}
-
 `
 
 测试结果：  
-'
+`
 ECB模式测试
 密文：88 49 30 169 205 32 93 8 172 138 54 250 14 158 179 202
 明文：49 50 51 52 53 54 55 56
@@ -110,4 +106,4 @@ OFB模式测试
 明文：49 50 51 52 53 54 55 56
 12345678
 
-'
+`

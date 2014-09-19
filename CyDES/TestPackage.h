@@ -319,11 +319,12 @@ namespace TestPackage {
 		string str;
 		string txt;
 		auto encryptor = new DesEncryptor();
-		unsigned long long Key = 12345678987654321LL;
+		unsigned long long Key;
 		vector<unsigned char> dat;
-		
+
 		//str = "Data Encryption Standard Mode Test";
 		str = "12345678";
+		Key = 12345678987654321LL;
 
 		// ECB模式测试
 		cout << "ECB模式测试" << endl;
@@ -333,9 +334,8 @@ namespace TestPackage {
 		cout << endl;
 		txt = encryptor->DecryptString(dat, Key, DesEncryptor::ECB);
 		cout << "明文：";
-		for each (unsigned char var in txt) cout << (int)var << " "; cout << endl;
-		cout << txt << endl;
-		cout << endl;
+		for each (unsigned char var in txt) cout << (int)var << " ";
+		cout << endl << txt << endl << endl;
 
 		// CBC模式测试
 		cout << "CBC模式测试" << endl;
@@ -345,9 +345,8 @@ namespace TestPackage {
 		cout << endl;
 		txt = encryptor->DecryptString(dat, Key, DesEncryptor::CBC);
 		cout << "明文：";
-		for each (unsigned char var in txt) cout << (int)var << " "; cout << endl;
-		cout << txt << endl;
-		cout << endl;
+		for each (unsigned char var in txt) cout << (int)var << " ";
+		cout << endl << txt << endl << endl;
 
 		// CFB模式测试
 		cout << "CFB模式测试" << endl;
@@ -357,9 +356,8 @@ namespace TestPackage {
 		cout << endl;
 		txt = encryptor->DecryptString(dat, Key, DesEncryptor::CFB);
 		cout << "明文：";
-		for each (unsigned char var in txt) cout << (int)var << " "; cout << endl;
-		cout << txt << endl;
-		cout << endl;
+		for each (unsigned char var in txt) cout << (int)var << " ";
+		cout << endl << txt << endl << endl;
 
 		// OFB模式测试
 		cout << "OFB模式测试" << endl;
@@ -369,9 +367,8 @@ namespace TestPackage {
 		cout << endl;
 		txt = encryptor->DecryptString(dat, Key, DesEncryptor::OFB);
 		cout << "明文：";
-		for each (unsigned char var in txt) cout << (int)var << " "; cout << endl;
-		cout << txt << endl;
-		cout << endl;
+		for each (unsigned char var in txt) cout << (int)var << " "; 
+		cout << endl << txt << endl << endl;
 	}
 
 	void TestAll() {
